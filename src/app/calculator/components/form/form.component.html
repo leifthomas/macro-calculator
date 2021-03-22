@@ -1,0 +1,67 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      About you
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="form">
+      <mat-form-field>
+        <mat-label>BMR</mat-label>
+        <input
+          formControlName="bmr"
+          placeholder="calories"
+          type="tel"
+          matInput
+          required
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Active calories</mat-label>
+        <input
+          formControlName="activeCalories"
+          placeholder="0"
+          type="tel"
+          matInput
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Current weight</mat-label>
+        <input
+          formControlName="weight"
+          placeholder="lbs"
+          type="tel"
+          matInput
+          required
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Goal</mat-label>
+        <mat-select formControlName="goal" required>
+          <mat-option *ngFor="let goal of goalOptions"
+            [disabled]="goal.isDisabled"
+            [value]="goal.value">
+            {{ goal.label  }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      (click)="form.reset()"
+      color="accent"
+      type="button"
+      mat-button
+    >
+      Reset
+    </button>
+    <!-- <button
+      [disabled]="form.invalid"
+      color="accent"
+      mat-raised-button
+    >
+      Calculate
+    </button> -->
+  </mat-card-actions>
+</mat-card>
