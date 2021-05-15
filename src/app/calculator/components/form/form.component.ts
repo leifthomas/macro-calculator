@@ -38,8 +38,8 @@ export class FormComponent implements OnDestroy, OnInit {
     value: GoalOption
   }> = [
     {
-      isDisabled: true,
-      label: 'Burn fat (coming soon)',
+      isDisabled: false,
+      label: 'Burn fat (-15%)',
       value: GoalOption.BurnFat
     },
     {
