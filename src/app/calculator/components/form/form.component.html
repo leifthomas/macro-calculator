@@ -7,9 +7,9 @@
   <mat-card-content>
     <form [formGroup]="form">
       <mat-form-field>
-        <mat-label>BMR</mat-label>
+        <mat-label>Resting energy</mat-label>
         <input
-          formControlName="bmr"
+          formControlName="restingEnergy"
           placeholder="calories"
           type="tel"
           matInput
@@ -17,10 +17,10 @@
         >
       </mat-form-field>
       <mat-form-field>
-        <mat-label>Active calories</mat-label>
+        <mat-label>Active energy</mat-label>
         <input
-          formControlName="activeCalories"
-          placeholder="0"
+          formControlName="activeEnergy"
+          placeholder="calories"
           type="tel"
           matInput
         >

@@ -9,7 +9,7 @@ import { CalculatorValues } from '../models/calculator-values.model';
 })
 export class CalculatorService {
   calculate(calculatorValues: CalculatorValues): CalculatorResults {
-    const resultCalories: number = (calculatorValues.bmr + (calculatorValues.activeCalories || 0)) * calculatorValues.goal;
+    const resultCalories: number = (calculatorValues.restingEnergy + (calculatorValues.activeEnergy || 0)) * calculatorValues.goal;
     const resultProtein: number = calculatorValues.goal === GoalOption.BuildMuscle ?
       Math.round(calculatorValues.weight) :
       Math.round(calculatorValues.weight * 1.1);

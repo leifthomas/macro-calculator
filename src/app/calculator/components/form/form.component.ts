@@ -26,8 +26,8 @@ export class FormComponent implements OnDestroy, OnInit {
   @Output() calculatorValueChanges: EventEmitter<CalculatorValues> = new EventEmitter();
 
   form: FormGroup = this.fb.group({
-    activeCalories: this.fb.control(null),
-    bmr: this.fb.control(null, Validators.required),
+    activeEnergy: this.fb.control(null),
+    restingEnergy: this.fb.control(null, Validators.required),
     goal: this.fb.control(null, Validators.required),
     weight: this.fb.control(null, Validators.required)
   });
@@ -49,7 +49,7 @@ export class FormComponent implements OnDestroy, OnInit {
     },
     {
       isDisabled: false,
-      label: 'Build muscle (+15%)',
+      label: 'Build muscle (+10%)',
       value: GoalOption.BuildMuscle
     }
   ];
@@ -65,8 +65,8 @@ export class FormComponent implements OnDestroy, OnInit {
         .pipe(
           filter(() => this.form.valid),
           tap((calculatorValues: {
-            activeCalories: string,
-            bmr: string,
+            activeEnergy: string,
+            restingEnergy: string,
             goal: GoalOption,
             weight: string
           }) => this.calculatorValueChanges

@@ -1,19 +1,19 @@
 import { GoalOption } from '../enums/goal-option.enum';
 
 export class CalculatorValues {
-  activeCalories!: number;
-  bmr!: number;
+  activeEnergy!: number;
+  restingEnergy!: number;
   goal!: GoalOption;
   weight!: number;
 
   constructor( input: {
-    activeCalories: string,
-    bmr: string,
+    activeEnergy: string,
+    restingEnergy: string,
     goal: GoalOption,
     weight: string
   }) {
-    this.activeCalories = parseInt(input.activeCalories, 10);
-    this.bmr = parseInt(input.bmr, 10);
+    this.activeEnergy = parseInt(input.activeEnergy, 10);
+    this.restingEnergy = parseInt(input.restingEnergy, 10);
     this.goal = input.goal;
     this.weight = parseInt(input.weight, 10);
   }
