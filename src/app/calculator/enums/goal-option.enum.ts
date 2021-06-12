@@ -1,5 +1,5 @@
 export enum GoalOption {
-  BurnFat = .85,
-  Maintain = 1,
-  BuildMuscle = 1.1
+  BurnFat = -500,
+  Maintain = 0,
+  BuildMuscle = 500
 }

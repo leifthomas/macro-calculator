@@ -39,17 +39,17 @@ export class FormComponent implements OnDestroy, OnInit {
   }> = [
     {
       isDisabled: false,
-      label: 'Burn fat (-15%)',
+      label: 'Burn fat (-500 calories)',
       value: GoalOption.BurnFat
     },
     {
       isDisabled: false,
-      label: 'Maintain weight (+0%)',
+      label: 'Maintain weight (+0 calories)',
       value: GoalOption.Maintain
     },
     {
       isDisabled: false,
-      label: 'Build muscle (+10%)',
+      label: 'Build muscle (+500 calories)',
       value: GoalOption.BuildMuscle
     }
   ];
